@@ -12,7 +12,7 @@ grep -Fqx 'run_logged "$OMARCHY_INSTALL/user/hardware/fix-vmwgfx-scaling.sh"' "$
 pass "user setup registers the vmwgfx scaling leaf"
 
 migration="$ROOT/migrations/1791051321.sh"
-[[ -n $migration ]] || fail "vmwgfx scaling migration exists"
+[[ -f $migration ]] || fail "vmwgfx scaling migration exists"
 pass "vmwgfx scaling migration exists"
 
 # The leaf only rewrites the shipped defaults, so the test seeds the fake home
